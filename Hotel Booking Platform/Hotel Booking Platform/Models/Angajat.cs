@@ -4,8 +4,8 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Models
 {
     public class Angajat : BaseEntity
     {
-        public Guid? HotelId { get; set; }
-        public Guid? DepartamentId { get; set; }
+        public Hotel? Hotel { get; set; }
+        public Departament? Departament { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
         public string Functie { get; set; }

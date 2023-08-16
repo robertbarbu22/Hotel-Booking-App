@@ -15,4 +15,13 @@
     <PackageReference Include="Microsoft.Identity.Web.UI" Version="1.16.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Hotel Booking Platform\Controllers\" />
+    <Folder Include="Hotel Booking Platform\Data\" />
+    <Folder Include="Hotel Booking Platform\Helpers\" />
+    <Folder Include="Hotel Booking Platform\Migrations\" />
+    <Folder Include="Hotel Booking Platform\Services\" />
+    <Folder Include="Hotel Booking Platform\Repositories\" />
+  </ItemGroup>
+
 </Project>
