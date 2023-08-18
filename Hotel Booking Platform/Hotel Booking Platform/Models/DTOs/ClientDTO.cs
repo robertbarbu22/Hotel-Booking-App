@@ -8,5 +8,6 @@
         public string Telefon { get; set; }
         public string Email { get; set; }
         public ICollection<RezervareDTO> Rezervari { get; set; }
+        public ICollection<HotelDTO> Hoteluri { get; set; }
     }
 }

@@ -6,6 +6,9 @@
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }
         public int Pret { get; set; }
+        public Guid HotelId { get; set; }
+        public Guid ClientId { get; set; }
+        public Guid CameraId { get; set; }
         public HotelDTO Hotel { get; set; }
         public ClientDTO Client { get; set; }
         public CameraDTO Camera { get; set; }

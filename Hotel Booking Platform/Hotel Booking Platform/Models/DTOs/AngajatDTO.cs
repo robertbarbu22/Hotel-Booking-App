@@ -9,6 +9,8 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Models.DTOs
         public string Functie { get; set; }
         public string Telefon { get; set; }
         public int Salariu { get; set; }
+        public Guid HotelId { get; set; }
+        public Guid DepartamentId { get; set; }
         public HotelDTO Hotel { get; set; }
         public DepartamentDTO Departament { get; set; }
     }

@@ -4,6 +4,7 @@
     {
         public Guid Id { get; set; }
         public int NrLocuri { get; set; }
+        public Guid HotelId { get; set; }
         public HotelDTO Hotel { get; set; }
     }
 }

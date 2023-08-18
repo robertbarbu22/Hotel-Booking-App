@@ -10,6 +10,7 @@
         public ICollection<RezervareDTO> Rezervari { get; set; }
         public ICollection<AngajatDTO> Angajati { get; set; }
         public ICollection<ClientDTO> Clienti { get; set; }
+        public Guid RestaurantId { get; set; }
         public RestaurantDTO Restaurant { get; set; }
     }
 }
