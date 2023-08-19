@@ -22,6 +22,12 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Services.ClientService
             return _mapper.Map<ClientDTO>(client);
         }
 
+        public async Task<ClientDTO> GetClientByNume(string nume)
+        {
+            var client = _clientRepository.GetClientByNume(nume);
+            return _mapper.Map<ClientDTO>(client);
+        }
+
         public async Task CreateClient(ClientDTO clientDTO)
         {
             var client = _mapper.Map<Client>(clientDTO);
