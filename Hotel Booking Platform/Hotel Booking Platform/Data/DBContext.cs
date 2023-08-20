@@ -15,6 +15,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Data
         public DbSet<Restaurant> Restaurante { get; set; }
         public DbSet<Departament> Departamente { get; set; }
         public DbSet<HotelClient> HotelClient { get; set; }
+        public DbSet<User> User { get; set; }
 
         public DBContext(DbContextOptions<DBContext> options) : base(options) { }
 
@@ -67,7 +68,13 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Data
                 .HasForeignKey(a => a.DepartamentId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Username)
+                .IsUnique();
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
 
         }
     }
