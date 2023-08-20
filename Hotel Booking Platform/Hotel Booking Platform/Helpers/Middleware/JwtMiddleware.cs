@@ -1,5 +1,6 @@
 ﻿using Hotel_Booking_Platform.Hotel_Booking_Platform.Helpers.JwtUtilsHelp;
 using Hotel_Booking_Platform.Hotel_Booking_Platform.Services.UserService;
+using Microsoft.AspNetCore.Http;
 
 namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Helpers.Middleware
 {
