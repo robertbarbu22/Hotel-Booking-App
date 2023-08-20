@@ -5,7 +5,6 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Models
 {
     public class Hotel : BaseEntity
     {
-        public Guid? Id { get; set; }
         public string Nume { get; set; }
         public string Adresa { get; set; }
         public string Telefon { get; set; }

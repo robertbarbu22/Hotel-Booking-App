@@ -21,8 +21,9 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
         }
 
         [HttpGet("GetClientById")]
-        public IActionResult GetClientById([FromQuery] string id)
+        public IActionResult GetClientById([FromQuery] Guid id)
         {
+
             var client = _clientService.GetClientById(id);
             if (client == null)
             {
@@ -68,13 +69,18 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
         [HttpDelete("DeleteClient")]
         public IActionResult DeleteClient([FromQuery] Guid id)
         {
-            var client = _clientService.DeleteClient(id);
-            if (client == null)
-            {
-                return NotFound();
-            }
-            return Ok(client);
+            _clientService.DeleteClient(id);
+            return NoContent();
         }
+
+        [HttpDelete("DeleteAll")]
+
+        public IActionResult DeleteAll()
+        {
+            _clientService.DeleteAll();
+            return NoContent();
+        }
+
 
 
     }
