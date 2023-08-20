@@ -8,9 +8,9 @@
         public string Username { get; set; }
         public string Telefon { get; set; }
         public string Email { get; set; }
-        public string Parola { get; set; }
-
-        public UserResponseDTO(User user)
+        public string Token { get; set; }
+        
+        public UserResponseDTO(User user, string token)
         {
             Id = user.Id;
             Nume = user.Nume;
@@ -18,7 +18,7 @@
             Username = user.Username;
             Telefon = user.Telefon;
             Email = user.Email;
-            Parola = user.Parola;
+            Token = token;
         }
     }
 }

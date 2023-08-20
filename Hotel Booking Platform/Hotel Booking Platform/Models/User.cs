@@ -1,5 +1,6 @@
 ﻿using Hotel_Booking_Platform.Hotel_Booking_Platform.Models.Base;
 using Hotel_Booking_Platform.Hotel_Booking_Platform.Models.Roles;
+using System.Text.Json.Serialization;
 
 namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Models
 {
@@ -10,6 +11,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Models
         public string Username { get; set; }
         public string Telefon { get; set; }
         public string Email { get; set; }
+        [JsonIgnore]
         public string Parola { get; set; }
         public Role Role { get; set; }
     }
