@@ -32,6 +32,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Helpers.Extension
             services.AddTransient<IHotelRepository, HotelRepository>();
             services.AddTransient<IRestaurantRepository, RestaurantRepository>();
             services.AddTransient<IRezervareRepository, RezervareRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
             return services;
         }
 
