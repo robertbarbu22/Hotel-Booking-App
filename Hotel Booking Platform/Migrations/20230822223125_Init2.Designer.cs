@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Hotel_Booking_Platform.Migrations
 {
     [DbContext(typeof(DBContext))]
-    [Migration("20230822203720_Initial")]
-    partial class Initial
+    [Migration("20230822223125_Init2")]
+    partial class Init2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

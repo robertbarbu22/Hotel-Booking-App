@@ -33,7 +33,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Repositories.AngajatRepo
 
         public async Task<List<Angajat>> GetAllAngajati()
         {
-            return _context.Angajati.ToList();
+            return _dbSet.ToList();
         }
     }
 }

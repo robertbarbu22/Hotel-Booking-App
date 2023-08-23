@@ -18,10 +18,10 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
             _angajatRepository = angajatRepository;
         }
 
-        [HttpGet("getAngajati")]
-        public IActionResult GetAngajati()
+        [HttpGet("getAllAngajati")]
+        public async Task<IActionResult> GetAngajatiAsync()
         {
-            var angajati = _angajatService.GetAllAngajati();
+            var angajati = await _angajatRepository.GetAllAngajati();
             return Ok(angajati);
         }
 

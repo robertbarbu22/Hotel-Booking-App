@@ -14,8 +14,11 @@ using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddDbContext<DBContext>(opts => { opts.UseSqlServer(builder.Configuration.GetConnectionString("AppDb")); });
+
+var connection = builder.Configuration.GetConnectionString("AppDb");
+builder.Services.AddDbContext<DBContext>(opts => { opts.UseSqlServer(connection); });
 builder.Services.AddControllersWithViews();
 builder.Services.AddRepositories();
 builder.Services.AddServices();

@@ -33,7 +33,23 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Helpers.Seeders
                     Salariu = 2000
                 };
 
+
+                var angajat3 = new Angajat
+                {
+                    Nume = "Popa",
+                    Prenume = "Andrei",
+                    Functie = "Gunoier",
+                    Telefon = "0735289018",
+                    Salariu = 1500
+                };
+
+                _context.Angajati.Add(angajat1);
+                _context.Angajati.Add(angajat2);
+                _context.Angajati.Add(angajat3);
+                _context.SaveChanges();
             }
+            
+            
         }
     }
 }
