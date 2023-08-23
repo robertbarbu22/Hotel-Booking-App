@@ -2,6 +2,7 @@
 {
     public class CameraDTO
     {
+        public string NumeHotel { get; set; }
         public Guid Id { get; set; }
         public int NrCamera { get; set; }
         public int NrPersoane { get; set; }

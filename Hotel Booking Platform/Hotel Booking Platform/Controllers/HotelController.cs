@@ -46,7 +46,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
             return Ok(hotels);
         }
 
-        [HttpPost("deleteHotel")]
+        [HttpDelete("deleteHotel")]
         public IActionResult DeleteHotel(Guid id)
         {
             _hotelService.DeleteHotel(id);

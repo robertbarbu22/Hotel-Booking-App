@@ -15,15 +15,15 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Repositories.CameraRepo
         {
             return _context.Camere.FirstOrDefault(x => x.Id == id);
         }
-        
+
         public async Task<List<Camera>> GetCamereByHotelId(Guid id)
         {
-            return _context.Camere.Where(x => x.HotelId == id).ToList();
+            return _dbSet.Where(x => x.HotelId == id).ToList();
         }
 
         public async Task<List<Camera>> GetAllCamere()
         {
-            return _context.Camere.ToList();
+            return _dbSet.ToList();
         }
     }
 }

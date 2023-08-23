@@ -4,6 +4,8 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Models
 {
     public class Rezervare : BaseEntity
     {
+        public string NumeHotel { get; set; }
+        public string NumeClient { get; set; }
         public Guid? HotelId { get; set; }
         public Guid? ClientId { get; set; }
         public Guid? CameraId { get; set; }

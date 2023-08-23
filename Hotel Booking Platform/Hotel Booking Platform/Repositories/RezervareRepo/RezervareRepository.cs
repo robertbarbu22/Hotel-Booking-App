@@ -17,17 +17,17 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Repositories.RezervareRe
 
         public async Task<List<Rezervare>> GetRezervariByClientId(Guid id)
         {
-            return _context.Rezervari.Where(x => x.ClientId == id).ToList();
+            return _dbSet.Where(x => x.ClientId == id).ToList();
         }
 
         public async Task<List<Rezervare>> GetRezervariByHotelId(Guid id)
         {
-            return _context.Rezervari.Where(x => x.HotelId == id).ToList();
+            return _dbSet.Where(x => x.HotelId == id).ToList();
         }
         
         public async Task<List<Rezervare>> GetAllRezervari()
         {
-            return _context.Rezervari.ToList();
+            return _dbSet.ToList();
         }
     }
 }

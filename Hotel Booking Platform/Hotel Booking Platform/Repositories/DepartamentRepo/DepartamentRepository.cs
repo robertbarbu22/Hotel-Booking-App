@@ -22,7 +22,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Repositories.Departament
 
         public async Task<List<Departament>> GetAllDepartamente()
         {
-            return _context.Departamente.ToList();
+            return _dbSet.ToList();
         }
     }
 }

@@ -18,7 +18,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
             _rezervareRepository = rezervareRepository;
         }
 
-        [HttpGet("createRezervare")]
+        [HttpPost("createRezervare")]
         public IActionResult CreateRezervare([FromBody] RezervareDTO rezervare)
         {
             var newRezervare = _rezervareService.CreateRezervare(rezervare);
@@ -57,7 +57,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
         [HttpGet("getRezervari")]
         public IActionResult GetRezervari()
         {
-            var rezervari = _rezervareService.GetAllRezervari();
+            var rezervari = _rezervareRepository.GetAllRezervari();
             return Ok(rezervari);
         }
 

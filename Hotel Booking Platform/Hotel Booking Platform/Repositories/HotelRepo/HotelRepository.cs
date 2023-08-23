@@ -22,7 +22,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Repositories.HotelRepo
 
         public async Task<List<Hotel>> GetAllHotels()
         {
-            return _context.Hoteluri.ToList();
+            return _dbSet.ToList();
         }
     }
 }

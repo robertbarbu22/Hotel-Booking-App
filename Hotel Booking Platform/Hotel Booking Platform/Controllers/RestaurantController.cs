@@ -20,7 +20,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
         [HttpGet("getRestaurante")]
         public IActionResult GetRestaurante()
         {
-            var restaurante = _restaurantService.GetAllRestaurante();
+            var restaurante = _restaurantRepository.GetAllRestaurante();
             return Ok(restaurante);
         }
 

@@ -3,6 +3,8 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Models.DTOs
 {
     public class AngajatDTO
     {
+        public string NumeHotel { get; set; }
+        public string NumeDepartament { get; set; }
         public Guid Id { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }

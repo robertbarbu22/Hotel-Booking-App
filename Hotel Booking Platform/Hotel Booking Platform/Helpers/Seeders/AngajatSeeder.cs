@@ -21,7 +21,11 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Helpers.Seeders
                     Prenume = "Ion",
                     Functie = "Receptioner",
                     Telefon = "0722222222",
-                    Salariu = 2000
+                    Salariu = 2000,
+                    NumeHotel = "Iaki",
+                    HotelId = _context.Hoteluri.FirstOrDefault(h => h.Nume == "Iaki").Id,
+                    NumeDepartament = "Receptie",
+                    DepartamentId = _context.Departamente.FirstOrDefault(d => d.Nume == "Receptie").Id
                 };
 
                 var angajat2 = new Angajat
@@ -30,7 +34,11 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Helpers.Seeders
                     Prenume = "Mihai",
                     Functie = "Receptioner",
                     Telefon = "0722222232",
-                    Salariu = 2000
+                    Salariu = 2000,
+                    NumeHotel = "Iaki",
+                    HotelId = _context.Hoteluri.FirstOrDefault(h => h.Nume == "Iaki").Id,
+                    NumeDepartament = "Receptie",
+                    DepartamentId = _context.Departamente.FirstOrDefault(d => d.Nume == "Receptie").Id
                 };
 
 
@@ -40,7 +48,11 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Helpers.Seeders
                     Prenume = "Andrei",
                     Functie = "Gunoier",
                     Telefon = "0735289018",
-                    Salariu = 1500
+                    Salariu = 1500,
+                    NumeHotel = "Vega",
+                    HotelId = _context.Hoteluri.FirstOrDefault(h => h.Nume == "Vega").Id,
+                    NumeDepartament = "Curatenie",
+                    DepartamentId = _context.Departamente.FirstOrDefault(d => d.Nume == "Curatenie").Id
                 };
 
                 _context.Angajati.Add(angajat1);

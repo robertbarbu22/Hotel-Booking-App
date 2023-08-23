@@ -2,6 +2,8 @@
 {
     public class RezervareDTO
     {
+        public string NumeHotel { get; set; }
+        public int NumeClient { get; set; }
         public Guid Id { get; set; }
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }

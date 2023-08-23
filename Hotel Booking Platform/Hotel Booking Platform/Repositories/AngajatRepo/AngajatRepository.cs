@@ -23,12 +23,12 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Repositories.AngajatRepo
 
         public async Task<List<Angajat>> GetAngajatiByDepartamentId(Guid id)
         {
-            return _context.Angajati.Where(x => x.DepartamentId == id).ToList();
+            return _dbSet.Where(x => x.DepartamentId == id).ToList();
         }
 
         public async Task<List<Angajat>> GetAngajatiByHotelId(Guid id)
         {
-            return _context.Angajati.Where(x => x.HotelId == id).ToList();
+            return _dbSet.Where(x => x.HotelId == id).ToList();
         }
 
         public async Task<List<Angajat>> GetAllAngajati()

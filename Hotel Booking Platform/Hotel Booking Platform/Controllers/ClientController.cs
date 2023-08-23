@@ -47,11 +47,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
         [HttpGet("GetAllClients")]
         public IActionResult GetAllClients()
         {
-            var clients = _clientService.GetAllClients();
-            if (clients == null)
-            {
-                return NotFound();
-            }
+            var clients = _clientRepository.GetAllClienti();
             return Ok(clients);
         }
 
@@ -74,7 +70,6 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
         }
 
         [HttpDelete("DeleteAll")]
-
         public IActionResult DeleteAll()
         {
             _clientService.DeleteAll();
