@@ -1,4 +1,6 @@
 ﻿using Hotel_Booking_Platform.Hotel_Booking_Platform.Models.Base;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Models
 {

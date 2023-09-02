@@ -8,7 +8,7 @@
 <div *ngIf="showDetails">
   <div *ngFor="let angajat of angajati" class="angajat-container">
     <div class="angajat-details">
-      <p>{{ angajat.nume }} {{ angajat.prenume }} - Hotel {{ angajat.numeHotel }} , Departament {{ angajat.numeDepartament }}, {{ angajat.functie }}, {{ angajat.telefon }}, {{ angajat.salariu }} RON</p>
+      <p>{{ angajat.nume }} {{ angajat.prenume }} - Hotel {{ angajat.numeHotel }} , Departament {{ angajat.numeDepartament }}, {{ angajat.functie }}, {{ angajat.telefon }}, {{ angajat.salariu }} RON, ID: {{angajat.id}}</p>
       
     </div>
   </div>

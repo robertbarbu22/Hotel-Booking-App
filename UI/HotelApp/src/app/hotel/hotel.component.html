@@ -1,0 +1,21 @@
+<div>
+    <h2 class="header">Hoteluri</h2>
+    <div class="button-container">
+      <button class="get-button" (click)="getAllHotels()">Get All Hotels</button>
+      <input type="text" [(ngModel)]="hotelId" class="input-field" placeholder="Introduceți ID-ul hotelului" (keyup.enter)="getHotelById()">
+      <input type="text" [(ngModel)]="hotelNume" class="input-field" placeholder="Introduceți numele hotelului" (keyup.enter)="getHotelByNume()">
+      <input type="text" [(ngModel)]="hotelId1" class="input-field1" placeholder="Stergeti hotelul cu ID-ul" (keyup.enter)="deleteHotelById()">
+      <button class="delete-button" (click)="deleteAllHotels()">Delete All Hotels</button>
+    </div>
+    
+  </div>
+  
+  
+  <div *ngIf="showDetails">
+    <div *ngFor="let hotel of hotels" class="hotel-container">
+      <div class="hotel-details">
+        <p> {{ hotel.nume }}, Adresa: {{hotel.adresa}}, {{hotel.telefon}}, Id hotel: {{hotel.id}}</p>
+      </div>
+    </div>
+  </div>
+  

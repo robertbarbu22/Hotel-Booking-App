@@ -74,8 +74,8 @@ async Task SeedDataAsync(IHost app)
 
     using var context = new DBContext(scope.ServiceProvider.GetRequiredService<DbContextOptions<DBContext>>());
 
-    var serviceAngajat = new AngajatSeeder(context);
-    serviceAngajat.SeedAngajat();
+    var serviceHotel = new HotelSeeder(context);
+    serviceHotel.SeedHotel();
 
     var serviceCamera = new CameraSeeder(context);
     serviceCamera.SeedCamera();
@@ -83,17 +83,17 @@ async Task SeedDataAsync(IHost app)
     var serviceClient = new ClientSeeder(context);
     serviceClient.SeedClient();
 
+    var serviceRestaurant = new Restaurantseeder(context);
+    serviceRestaurant.SeedRestaurant();
+
     var serviceDepartament = new DepartamentSeeder(context);
     serviceDepartament.SeedDepartament();
 
-    var serviceHotel = new HotelSeeder(context);
-    serviceHotel.SeedHotel();
+    var serviceAngajat = new AngajatSeeder(context);
+    serviceAngajat.SeedAngajat();
 
     var serviceHotelClient = new HotelClientSeeder(context);
     serviceHotelClient.SeedHotelClient();
-
-    var serviceRestaurant = new Restaurantseeder(context);
-    serviceRestaurant.SeedRestaurant();
 
     var serviceRezervare = new RezervareSeeder(context);
     serviceRezervare.SeedRezervare();

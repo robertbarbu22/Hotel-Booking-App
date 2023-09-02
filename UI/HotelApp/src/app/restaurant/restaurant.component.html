@@ -1,0 +1,17 @@
+<div>
+    <h2 class="header">Restaurante</h2>
+    <div class="button-container">
+      <button class="get-button" (click)="getAllRestaurante()">Get All Restaurante</button>
+      <button class="delete-button" (click)="deleteAllRestaurante()">Delete All Restaurante</button>
+    </div>
+</div>
+  
+  
+  <div *ngIf="showDetails">
+    <div *ngFor="let restaurant of restaurante" class="restaurant-container">
+      <div class="restaurant-details">
+        <p>Denumire: {{restaurant.nume}} , Numar locuri: {{ restaurant.nrLocuri}}, Id hotel: {{restaurant.hotelId}}, Id Restaurant: {{restaurant.id}} </p>
+      </div>
+    </div>
+  </div>
+  

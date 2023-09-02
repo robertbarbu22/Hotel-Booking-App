@@ -1,0 +1,20 @@
+<div>
+    <h2 class="header">Rezervari</h2>
+    <div class="button-container">
+      <button class="get-button" (click)="getAllRezervari()">Get All Rezervari</button>
+      <input type="text" [(ngModel)]="rezervareId" class="input-field" placeholder="Introduceți ID-ul rezervarii" (keyup.enter)="getRezervareById()">
+      <input type="text" [(ngModel)]="rezervareId1" class="input-field1" placeholder="Stergeti rezervarea cu ID-ul" (keyup.enter)="deleteRezervareById()">
+      <button class="delete-button" (click)="deleteAllRezervari()">Delete All Rezervari</button>
+    </div>
+    
+  </div>
+  
+  
+  <div *ngIf="showDetails">
+    <div *ngFor="let rezervare of rezervari" class="rezervare-container">
+      <div class="rezervare-details">
+        <p>{{rezervare.numeClient}} - {{ rezervare.numeHotel }}, Check-In:  {{rezervare.checkIn}}, Check-Out: {{rezervare.CheckOut}}, Id rezervare: {{rezervare.id}}</p>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,56 @@
+<div>
+    <h2 class="header">Clienti</h2>
+    <div class="button-container">
+      <button class="get-button" (click)="getAllClienti()">Get All Clienti</button>
+      <input type="text" [(ngModel)]="clientId" class="input-field" placeholder="Introduceți ID-ul clientului" (keyup.enter)="getClientById()">
+      <input type="text" [(ngModel)]="clientNume" class="input-field" placeholder="Introduceți numele clientului" (keyup.enter)="getClientByNume()">
+      <input type="text" [(ngModel)]="clientId1" class="input-field1" placeholder="Stergeti clientul cu ID-ul" (keyup.enter)="deleteClientById()">
+      <button class="delete-button" (click)="deleteAllClienti()">Delete All Clienti</button>
+    </div>
+    
+  </div>
+  
+  
+  <div *ngIf="showDetails">
+    <div *ngFor="let client of clienti" class="client-container">
+      <div class="client-details">
+        <p> {{ client.nume }} {{client.prenume}}, {{client.telefon}}, {{client.email}}, Id client: {{client.id}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h3>Adăugare client nou</h3>
+    <form (submit)="createClient()">
+      <div class="form-group">
+        <label for="id">Id:</label>
+        <input type="text" id="id" [(ngModel)]="clientId2" name="id" required>
+      </div>
+      <div class="form-group">
+        <label for="nume">Nume:</label>
+        <input type="text" id="nume" [(ngModel)]="clientNume1" name="nume" required>
+      </div>
+      <div class="form-group">
+        <label for="prenume">Prenume:</label>
+        <input type="text" id="prenume" [(ngModel)]="clientPrenume" name="prenume" required>
+      </div>
+      <div class="form-group">
+        <label for="telefon">Telefon:</label>
+        <input type="text" id="telefon" [(ngModel)]="clientTelefon" name="telefon" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" [(ngModel)]="clientEmail" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="rezervari">Rezervari:</label>
+        <input type="text" id="rezervari" [(ngModel)]="clientRezervari" name="rezervari" >
+      </div>
+      <div class="form-group">
+        <label for="hoteluri">Hoteluri:</label>
+        <input type="text" id="hoteluri" [(ngModel)]="clientHoteluri" name="hoteluri" >
+      </div>
+      <button type="submit">Adaugă Client</button>
+    </form>
+  </div>
+  

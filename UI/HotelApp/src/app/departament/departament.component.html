@@ -1,0 +1,17 @@
+<div>
+    <h2 class="header">Departamente</h2>
+    <div class="button-container">
+      <button class="get-button" (click)="getAllDepartamente()">Get All Departamente</button>
+      <button class="delete-button" (click)="deleteAllDepartamente()">Delete All Departamente</button>
+    </div>
+  </div>
+  
+  
+  <div *ngIf="showDetails">
+    <div *ngFor="let departament of departamente" class="departament-container">
+      <div class="departament-details">
+        <p>Denumire: {{departament.nume}} , Numar angajati: {{ departament.nrAngajati}}, ID: {{departament.id}}</p>
+      </div>
+    </div>
+  </div>
+  
