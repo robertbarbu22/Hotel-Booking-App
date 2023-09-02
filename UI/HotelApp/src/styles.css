@@ -1,0 +1,15 @@
+
+body {
+  background-image: url('poze/istockphoto-1204999716-612x612.jpg');
+  background-size: cover; /* Acoperirea completă a fundalului */
+  background-repeat: no-repeat; /* Nu repetăm imaginea */
+  background-attachment: fixed; /* Fixăm imaginea pentru a nu se derula cu conținutul */
+}
+
+
+  
+  body {    font-family: "Arial", sans-serif;
+    color: #fff; /* Text alb */
+  }
+
+  

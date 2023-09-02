@@ -1,0 +1,16 @@
+<body>
+<div class="header">
+  <h1 class="welcome-message">Welcome to HotelApp</h1>
+  <div class="menu">
+    <button (click)="navigateTo('angajat')">Angajat</button>
+    <button (click)="navigateTo('camera')">Camera</button>
+    <button (click)="navigateTo('client')">Client</button>
+    <button (click)="navigateTo('departament')">Departament</button>
+    <button (click)="navigateTo('hotel')">Hotel</button>
+    <button (click)="navigateTo('restaurant')">Restaurant</button>
+    <button (click)="navigateTo('rezervare')">Rezervare</button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+</body>
+

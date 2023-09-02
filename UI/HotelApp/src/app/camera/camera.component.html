@@ -1,0 +1,19 @@
+<div>
+    <h2 class="header">Camere</h2>
+    <div class="button-container">
+      <button class="get-button" (click)="getAllCamere()">Get All Camere</button>
+      <button class="delete-button" (click)="deleteAllCamere()">Delete All Camere</button>
+      <input type="text" [(ngModel)]="cameraId" class="input-field" placeholder="Introduceți ID-ul camerei" (keyup.enter)="getCameraById()">
+
+    </div>
+  </div>
+  
+  
+  <div *ngIf="showDetails">
+    <div *ngFor="let camera of camere" class="camera-container">
+      <div class="camera-details">
+        <p>Hotel {{ camera.numeHotel }} , Camera numarul {{camera.nrCamera}}, Numar persoane : {{camera.nrPersoane}}, ID camera: {{camera.id}} </p>
+      </div>
+    </div>
+  </div>
+  

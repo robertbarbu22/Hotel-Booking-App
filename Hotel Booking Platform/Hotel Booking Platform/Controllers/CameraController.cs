@@ -18,21 +18,21 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
             _cameraRepository = cameraRepository;
         }
 
-        [HttpGet]
+        [HttpGet("GetAllCamere")]
         public IActionResult Get()
         {
             var cameras = _cameraRepository.GetAllCamere();
             return Ok(cameras);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetCameraById/{id}")]
         public IActionResult Get(Guid id)
         {
             var camera = _cameraRepository.GetCameraById(id);
             return Ok(camera);
         }
 
-        [HttpDelete]
+        [HttpDelete("DeleteCamere")]
         public IActionResult Delete()
         {
             _cameraService.DeleteAll();

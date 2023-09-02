@@ -1,0 +1,15 @@
+<div>
+  <h2 class="header">Angajati</h2> 
+  <div class="button-container"> 
+    <button class="get-button" (click)="getAllAngajati()">Get All Angajati</button>
+    <button class="delete-button" (click)="deleteAllAngajati()">Delete All Angajati</button>
+  </div>
+</div>
+<div *ngIf="showDetails">
+  <div *ngFor="let angajat of angajati" class="angajat-container">
+    <div class="angajat-details">
+      <p>{{ angajat.nume }} {{ angajat.prenume }} - Hotel {{ angajat.numeHotel }} , Departament {{ angajat.numeDepartament }}, {{ angajat.functie }}, {{ angajat.telefon }}, {{ angajat.salariu }} RON</p>
+      
+    </div>
+  </div>
+</div>
