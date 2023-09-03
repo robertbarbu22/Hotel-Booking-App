@@ -29,5 +29,6 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Repositories.RezervareRe
         {
             return _dbSet.ToList();
         }
+
     }
 }

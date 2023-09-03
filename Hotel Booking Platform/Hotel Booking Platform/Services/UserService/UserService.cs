@@ -11,9 +11,10 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Services.UserService
         public IUserRepository _userRepository;
         private readonly IJwtUtils _jwtUtils;
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository, IJwtUtils jwtUtils)
         {
             _userRepository = userRepository;
+            _jwtUtils = jwtUtils;
         }
         public async Task CreateUser(User newUser)
         {

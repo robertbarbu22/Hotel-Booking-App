@@ -51,17 +51,6 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
             return Ok(clients);
         }
 
-        [HttpPost("CreateClient")]
-        public IActionResult CreateClient([FromBody] ClientDTO client)
-        {
-            var newClient = _clientService.CreateClient(client);
-            if (newClient == null)
-            {
-                return BadRequest();
-            }
-            return Ok(newClient);
-        }
-
         [HttpDelete("DeleteClient")]
         public IActionResult DeleteClient([FromQuery] Guid id)
         {

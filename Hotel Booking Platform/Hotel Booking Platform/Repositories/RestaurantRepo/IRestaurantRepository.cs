@@ -8,5 +8,6 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Repositories.RestaurantR
         Restaurant GetRestaurantById(Guid id);
         Restaurant GetRestaurantByHotelId(Guid id);
         public Task<List<Restaurant>> GetAllRestaurante();
+        Restaurant GetRestaurantbyClientId(Guid id);
     }
 }

@@ -5,6 +5,7 @@ using Hotel_Booking_Platform.Hotel_Booking_Platform.Services.UserService;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Hotel_Booking_Platform.Hotel_Booking_Platform.Models.DTOs;
+using BCryptNet = BCrypt.Net.BCrypt;
 
 namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
 {
@@ -27,7 +28,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
             var userToCreate = new User
             {
                 Username = user.Username,
-                Parola = user.Parola,
+                Parola = BCryptNet.HashPassword(user.Parola),
                 Nume = user.Nume,
                 Prenume = user.Prenume,
                 Email = user.Email,
@@ -50,7 +51,7 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
             var userToCreate = new User
             {
                 Username = user.Username,
-                Parola = user.Parola,
+                Parola = BCryptNet.HashPassword(user.Parola),
                 Nume = user.Nume,
                 Prenume = user.Prenume,
                 Email = user.Email,
@@ -63,6 +64,17 @@ namespace Hotel_Booking_Platform.Hotel_Booking_Platform.Controllers
             }
             await _userService.CreateUser(userToCreate);
             return Ok();
+        }
+
+        [HttpPost("authenticate")]
+        public async Task<IActionResult> Authenticate(UserRequestDTO user)
+        {
+            var response = _userService.Authenticate(user);
+            if (response == null)
+            {
+                return BadRequest("Username or password is invalid!");
+            }
+            return Ok(response);
         }
 
     }
