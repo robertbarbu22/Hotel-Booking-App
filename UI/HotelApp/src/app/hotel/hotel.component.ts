@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class HotelComponent implements OnInit {
 
   readonly APIUrl = "http://localhost:5000/api/Hotel/";
-  hotels: any[] = new Array(); // Definiți un vector (array) pentru camere
+  hotels: any[] = new Array(); 
   hotelId: string = '';
   hotelId1: string = '';
   hotelNume: string = '';
@@ -56,7 +56,7 @@ export class HotelComponent implements OnInit {
     if (this.hotelNume && this.hotelNume.trim() !== '') {
       this.http.get<any>(`${this.APIUrl}GetByNume?nume=${this.hotelNume}`).subscribe(response => {
         if (response && response.id) {
-          // Afișați datele camerei când se găsesc
+      
           this.hotels = [response.result];
           this.showDetails = true;
         } else {

@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ClientComponent implements OnInit {
 
   readonly APIUrl = "http://localhost:5000/api/Client/";
-  clienti: any[] = new Array(); // Definiți un vector (array) pentru camere
+  clienti: any[] = new Array(); 
   clientId: string = '';
   clientId1: string = '';
   clientNume: string = '';
@@ -63,7 +63,6 @@ export class ClientComponent implements OnInit {
     if (this.clientNume && this.clientNume.trim() !== '') {
       this.http.get<any>(`${this.APIUrl}GetClientByNume?nume=${this.clientNume}`).subscribe(response => {
         if (response && response.id) {
-          // Afișați datele camerei când se găsesc
           this.clienti = [response.result];
           this.showDetails = true;
         } else {
@@ -116,7 +115,7 @@ export class ClientComponent implements OnInit {
     this.http.post<any>(`${this.APIUrl}CreateClient`, newClient).subscribe(response => {
       if (response && response.id) {
         console.log('Clientul a fost creat cu succes.');
-        // Reîmprospătați lista de clienti sau faceți orice altceva este necesar după crearea clientului.
+       
         this.getAllClienti();
       } else {
         console.error('A apărut o eroare la crearea clientului.');

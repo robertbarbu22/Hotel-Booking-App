@@ -18,7 +18,7 @@ export class AngajatComponent implements OnInit {
 
   getAllAngajati() {
     if (this.showDetails) {
-      this.showDetails = false; // Ascunde detalii dacă sunt deja afișate
+      this.showDetails = false; 
     } else {
       this.http.get(this.APIUrl + 'GetAllAngajati').subscribe(data => {
         this.angajati = data as any[];

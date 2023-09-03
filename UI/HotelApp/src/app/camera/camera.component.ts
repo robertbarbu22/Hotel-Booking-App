@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class CameraComponent implements OnInit {
 
   readonly APIUrl = "http://localhost:5000/api/Camera/";
-  camere: any[] = new Array(); // Definiți un vector (array) pentru camere
+  camere: any[] = new Array(); 
   cameraId: string = '';
   showDetails: boolean = false;
   
@@ -38,7 +38,7 @@ export class CameraComponent implements OnInit {
     if (this.cameraId && this.cameraId.trim() !== '') {
       this.http.get<any>(`${this.APIUrl}GetCameraById/${this.cameraId}`).subscribe(response => {
         if (response && response.id) {
-          // Afișați datele camerei când se găsesc
+   
           this.camere = [response];
           this.showDetails = true;
         } else {

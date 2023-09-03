@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class RezervareComponent implements OnInit {
 
   readonly APIUrl = "http://localhost:5000/api/Rezervare/";
-  rezervari: any[] = new Array(); // Definiți un vector (array) pentru camere
+  rezervari: any[] = new Array(); 
   rezervareId: string = '';
   rezervareId1: string = '';
   showDetails: boolean = false;
